@@ -1,17 +1,22 @@
+import Categories from "./components/Categories";
 import Pages from "./components/pages/Pages";
-import {QueryClientProvider, QueryClient} from 'react-query';
-import {ReactQueryDevtools} from 'react-query/devtools'
+// import {QueryClientProvider, QueryClient} from 'react-query';
+// import {ReactQueryDevtools} from 'react-query/devtools'
+import {BrowserRouter} from "react-router-dom"
 
-
-const queryClient = new QueryClient();
+// const queryClient = new QueryClient();
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
+    // <QueryClientProvider client={queryClient}>
+    <BrowserRouter>
     <div className="App">
-      <h1><Pages/></h1>
+      <Categories/>
+      <Pages/>
+      
     </div>
-    <ReactQueryDevtools initialIsOpen={true}/>
-    </QueryClientProvider>
+    </BrowserRouter>
+    // <ReactQueryDevtools initialIsOpen={true}/>
+    // </QueryClientProvider>
   );
 }
 
