@@ -3,6 +3,7 @@ import Pages from "./components/pages/Pages";
 // import {QueryClientProvider, QueryClient} from 'react-query';
 // import {ReactQueryDevtools} from 'react-query/devtools'
 import {BrowserRouter} from "react-router-dom"
+import Search from "./components/Search";
 
 // const queryClient = new QueryClient();
 function App() {
@@ -10,6 +11,7 @@ function App() {
     // <QueryClientProvider client={queryClient}>
     <BrowserRouter>
     <div className="App">
+      <Search/>
       <Categories/>
       <Pages/>
       
